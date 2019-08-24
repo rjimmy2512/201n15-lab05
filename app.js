@@ -67,7 +67,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 function sumArray(testArray){
   var sum = 0;
-  for (var= i; i < testArray.length; i++){
+  for (var i=0; i < testArray.length; i++){
     sum = summation(sum, testArray[i])[0];
   }
   var string = '${testArray} was passed as an array of numbers, and ${sum} is their sum.';
