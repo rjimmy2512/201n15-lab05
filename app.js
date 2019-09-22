@@ -65,14 +65,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-function sumArray(testArray){
-  var sum = 0;
-  for (var i=0; i < testArray.length; i++){
-    sum = summation(sum, testArray[i])[0];
-  }
-  var string = '${testArray} was passed as an array of numbers, and ${sum} is their sum.';
-  return[sum, string];
-}
+sumArray = function(testArray){
+  var sum = testArray.reduce(function(a,b){
+   return a + b
+  }, 0);
+  
+  var string = `${testArray} was passed as an array of numbers, and ${sum} is their sum.`;
+  return [sum, string];
+}  
 
 // var testArray = [2, 3, 4]; //eslint-disable-line
 
@@ -95,15 +95,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-function multiplyArray(multArr){
-  var product = 1;
-  for (var i=0; i<multArr.length; i++){
-    product = multiply(product, multArr[i])[0];
-  }
-  var string = 'The numbers ${multArray} have a product of ${product}.';
-  return[product, string];
+multipyArray = function(testMultiplyArray){
+let p = 1;
+for (var i = 0; i < testMultiplyArray.length; i ++){ 
+     p *= testMultiplyArray[i];
+    }
+    var string = `The numbers ${testMultiplyArray} have a product of ${p}`;
+    return[p, string];
 }
-
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
